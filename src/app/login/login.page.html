@@ -2,7 +2,7 @@
 
   <ion-toolbar>
 
-    <ion-title>SkeletonAPP</ion-title>
+    <ion-title>Asistencia DUOC UC</ion-title>
 
   </ion-toolbar>
 
@@ -15,7 +15,7 @@
 
     <ion-card-header>
 
-      <ion-card-title>Bienvenido!</ion-card-title>
+      <ion-card-title>¡Bienvenido a la plataforma de asistencia!</ion-card-title>
 
     </ion-card-header>
 
@@ -24,29 +24,35 @@
 
       <ion-item>
 
-        <ion-label position="floating">Usuario</ion-label>
+        <ion-label position="floating">Nombre de Usuario</ion-label>
 
-        <ion-input type="text" [(ngModel)]="usuario" maxlength="8" minlength="3"></ion-input>
+        <ion-input type="text" [(ngModel)]="usuario" maxlength="10" minlength="4"></ion-input>
 
       </ion-item>
 
 
       <ion-item>
 
-        <ion-label position="floating">Password</ion-label>
+        <ion-label position="floating">Contraseña</ion-label>
 
-        <ion-input type="password" [(ngModel)]="password" maxlength="4" pattern="[0-9]*"></ion-input>
+        <ion-input type="password" [(ngModel)]="password" maxlength="6" pattern="[0-9]*"></ion-input>
 
       </ion-item>
 
 
       <ion-button expand="block" (click)="ingresar()">Ingresar</ion-button>
 
+      
+      <ion-button expand="block" [routerLink]="['/recuperar-contrasena']">Recuperar</ion-button>
+
+      
+       
     </ion-card-content>
 
+    
   </ion-card>
 
 
-  <ion-button expand="block" href="/signup">Crea tu cuenta gratis</ion-button>
+  
 
 </ion-content>

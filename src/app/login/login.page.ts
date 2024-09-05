@@ -34,7 +34,7 @@ export class LoginPage implements OnInit {
 
     if (!this.validarUsuario(this.usuario)) {
 
-      await this.mostrarAlerta('Error', 'El usuario debe tener entre 3 y 8 caracteres alfanuméricos.');
+      await this.mostrarAlerta('Error', 'El usuario debe tener entre 4 y 10 caracteres alfanuméricos.');
 
       return;
 
@@ -43,7 +43,7 @@ export class LoginPage implements OnInit {
 
     if (!this.validarPassword(this.password)) {
 
-      await this.mostrarAlerta('Error', 'La contraseña debe ser numérica y tener 4 dígitos.');
+      await this.mostrarAlerta('Error', 'La contraseña debe ser numérica y tener 6 dígitos.');
 
       return;
 
@@ -71,14 +71,14 @@ export class LoginPage implements OnInit {
 
   validarUsuario(usuario: string): boolean {
 
-    return /^[a-zA-Z0-9]{3,8}$/.test(usuario);
+    return /^[a-zA-Z0-9]{4,10}$/.test(usuario);
 
   }
 
 
   validarPassword(password: string): boolean {
 
-    return /^\d{4}$/.test(password);
+    return /^[0-9]{6}$/.test(password);
 
   }
 
